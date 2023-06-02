@@ -1,0 +1,29 @@
+{
+  "name": "formsandimagesoncloudnary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mapping.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sourabhpande532/Cloudinary_FormImages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sourabhpande532/Cloudinary_FormImages/issues"
+  },
+  "homepage": "https://github.com/Sourabhpande532/Cloudinary_FormImages#readme",
+  "dependencies": {
+    "cloudinary": "^1.37.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
