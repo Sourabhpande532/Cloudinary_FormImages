@@ -1,4 +1,10 @@
 /**
+ @ABOUT_FILES_&_IMAGES_ON_CLOUDINARY
+ A lot of time when the backend is not configured ore rather i can say the srrategies not to have this blot but rather to just gie you a file iteself.
+  
+ @_!IMP: it always expect you should not give the file name you shoud give me "Data URL" very IMPORTANT.
+
+ 
  ----------------NEW-----------------
 
  ----------------HEADING-------------
