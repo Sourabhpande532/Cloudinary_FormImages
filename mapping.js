@@ -46,4 +46,35 @@
  
   REf:-> ✈️🔗https://console.cloudinary.com/console/c-ff223b74b9853962b24f65c186b51e/getting-started
 
+
+ ----------------NEW-----------------
+
+ ----------------HEADING-------------
+ @HINT:😇😇
+ @💹TITLE:How GET Work And Postman Issues
+ @!Instruction:-> Use Postman
+In this one we'r 📝Handling GET type "requist"
+-while testing on Postman at first go you'll get undefined so for that we need use middleware 🔺app.use(express.json()); Now a'm able to receive the Data.
+
+As soon as you made get request on "GOOGLE"
+Then go to Google and search "xyz" name in the "querry" you'r gonna notice this one /serch/?1=hitesh observed.
+@see https://www.google.com/search?q=hitesh+choudhary&sxsrf=APwXE
+
+@😗KEEP_NOTE: whenever you search on "x" platform anything it goes into URL as we did see above e.g:
+
+REF: ✈️🔗https://expressjs.com/en/4x/api.html#req.query(TO more clear)
+
+@😗KEEP_NOTE:Always pass information "x-wwww-form-urlencoded
+"not in form Data. because everything it needs to be travelled on urlencoded form pass "name" and "value" & as soon as you hit it'll give you a {} so for that we need one more middleware app.use🔺(express.urlencoded...) & all of url info come into body itself.
+
+Why Need to pass extended:true🧐🧐?
+
+when sometime you'r data come in complicated way like {
+"fullname": {"firstname":"s","lastname":"p"}} via form so to get rid of that complication use that. in case that is also allow use "extended:true" in middleware.
+
+Need to install 2 middleware 
+-🔺app.use(express.json())
+-🔺app.use(express.urlencoded({extended:true}))
+
+
  */
