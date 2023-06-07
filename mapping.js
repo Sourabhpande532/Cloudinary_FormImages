@@ -50,7 +50,7 @@
  ----------------NEW-----------------
 
  ----------------HEADING-------------
- @HINT:😇😇
+ @IDENTIFIRE😇😇
  @💹TITLE:How GET Work And Postman Issues
  @!Instruction:-> Use Postman
 In this one we'r 📝Handling GET type "requist"
@@ -75,6 +75,34 @@ when sometime you'r data come in complicated way like {
 Need to install 2 middleware 
 -🔺app.use(express.json())
 -🔺app.use(express.urlencoded({extended:true}))
+
+
+ ----------------NEW-----------------------
+
+ ----------------HEADING-------------------
+ @--👉👉TITLE: TEMPLATE ENGINE(How to inject & all stuff)
+
+ 1) Ref: ✈️🔗https://ejs.co/ [EJS]
+ 2) Ref: ✈️🔗https://getbootstrap.com/ [Bootstrap]
+
+ So,As we already download -------------------"EJS"
+ -npm i ejs
+ 
+In order to use EJS we need set some stuff
+This atucally come as a part of "middleware" but the way is defferent it came as view enging middleware. 👇👇
+-👉app.set("view engine", "ejs");
+@😗KEEP_NOTE:-> If you want to use view engine & EJS of Course  It's an convenction you need to create "views" folder & create files into that.
+-🔺getform.ejs
+-🔺postform.ejs( make sure: this postform needs to be serve on web so it's get request not post) 
+
+So, how we can deply this one Just use get request app.get(..)
+
+
+
+
+
+
+
 
 
  */
