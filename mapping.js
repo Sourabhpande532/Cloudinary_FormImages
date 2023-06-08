@@ -98,11 +98,34 @@ This atucally come as a part of "middleware" but the way is defferent it came as
 So, how we can deply this one Just use get request app.get(..)
 
 
+ ----------------NEW-----------------------
 
+ ----------------HEADING-------------------
+ @--👉👉TITLE: Confusion in fronted via handling form 
 
+ @ABOUT: GET form
 
+ @😵KEEP_NOTE:
+  Always talk to fronted one in order to clear some of the basic ground stuff.
+ 
+ @😵KEEP_NOTE: 
+  --TEMPLATE ENGINE send data in querry(IN URL) 🔺 e.g req.querry;
+  --FRAMWORK LIKE REACT,ANGULAR send data in body itself 🔺 e.g req.body 
+  O.W you'll face some error of 😱😱{}
 
+  req.body it simply mean we'r receiving something info in either in body iteself(if Framework you use) or in querry iteself(if use termplete ENGINE) 
 
+  if you check via post 
+  🔗✈️http://localhost:5000/myapp
 
+  @KEEP_ATTENTIONS@
+  @COMPULSORY@....
+  Need to pass this information while in the getform or anyform
+  -🔺<form method:"GET" action="/x" />
+  -🔺Need to name="x" filled in <input name="x"/> if you not pass you miss the field then 
+  - if the data is comeing from termplete engine use req.querry o.w get {}
+  - if the data is comeing from fronted pass req.body o.w get {}
+
+  @😗KEEP_NOTE: Always send images in post form
 
  */

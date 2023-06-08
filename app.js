@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/myapp", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
+  console.log(req.body); //usually come info via Framwork like react..
+  res.send(req.query); //ejs pass info usually in query
 });
 /* @IDENTIFIRE:😇 ↖️*/
 
@@ -24,6 +24,7 @@ app.get("/postform", (req, res) => {
 /*
  @IDENTIFIRE👉👉TITLE: TEMPLATE ENGINE🔝🔝
 */
+
 
 const PORT = 5000;
 app.listen(PORT, () =>
