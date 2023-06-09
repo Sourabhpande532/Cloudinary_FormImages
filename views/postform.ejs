@@ -12,7 +12,7 @@
 <body class="bg-dark text-white">
     <div class="container mt-4 col-4 col-offset-6">
         <h1 class="display-3">POST Form </h1>
-            <form>
+            <form method="post" action="/mypost">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">FirstName</label>
                     <input type="text" name="firstname"  class="form-control" id="firstname" aria-describedby="emailHelp">
@@ -20,6 +20,10 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">LastName</label>
                     <input type="text" name="lastname" class="form-control" id="lastname">
+                </div>
+                <div class="mb-3">
+                    <label for="samplefile" class="form-label">samplefile</label>
+                    <input type="file" name="samplefile" class="form-control" id="samplefile">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

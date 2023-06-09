@@ -128,4 +128,35 @@ So, how we can deply this one Just use get request app.get(..)
 
   @😗KEEP_NOTE: Always send images in post form
 
+
+ ----------------NEW-----------------------
+
+ ----------------HEADING-------------------
+ @--👉👉TITLE: 📝Handling Images In Forms
+
+ @ABOUT: POST form 
+ So, in this one how to handles files as well as images the post form data Always came in body itself(req.body);
+
+ @REMEMBER:-> befoure uploade file on fronted need to pass MIDDLEWARE in this one we've
+ - express-fileupload[Need to inject on that app.js]
+ first require it then inject it app.use(....here....)
+ 
+ Now need to dumb it down into ""/mypost"" method
+ Hey,if you'r receiving any post kind of data in the formate of file just console.log(req.files) not sending in the body it's have defferent approach as of now send it into 
+ -console.log(req.files);
+
+ let's go on fronted & fill the form....
+ Now i got ""undefined"" 🤔🤔 why ??
+
+ to clear you you need to read little bit this docs
+
+ Ref: ✈️🔗https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL [it Always support that @😱FACT:it's fronted one duty to all];
+ 
+Then need to pass info here like that...
+app.use(fileupload({useTempFiles: true,tempFileDir: "/tmp/"}
+
+
+
+
+
  */
