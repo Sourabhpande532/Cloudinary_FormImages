@@ -1,6 +1,15 @@
 const express = require("express");
 const app = express();
 const fileupload = require("express-fileupload");
+const cloudinary = require("cloudinary").v2;
+
+// API cloudinary
+cloudinary.config({
+  // cloud_name: process.env.CLOUD_NAME
+  cloud_name: "djqf9vhkq",
+  api_key:"333799583579346",
+  api_secret:"NQvSauVhU6fjJ5Wrd_GDqMHTVu4"
+})
 
 app.set("view engine", "ejs");
 
@@ -19,12 +28,23 @@ app.get("/myapp", (req, res) => {
 });
 /* @IDENTIFIRE:😇 ↖️*/
 
-
 /*POSTFORM REQUEST*/
-app.post("/mypost", (req,res)=>{
+app.post("/mypost", async(req,res)=>{
   console.log(req.body);
   console.log(req.files);
-  res.send(req.body);
+
+  let file = req.files.samplefile; // same name 'postform'
+  let result = await cloudinary.uploader.upload(file.tempFilePath,{
+    folder: 'Users'
+  })
+  console.log(result);
+
+  details = {
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    result
+  }
+  res.send(details);
 })
 
 

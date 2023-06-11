@@ -155,8 +155,45 @@ So, how we can deply this one Just use get request app.get(..)
 Then need to pass info here like that...
 app.use(fileupload({useTempFiles: true,tempFileDir: "/tmp/"}
 
+still "undefined 🤔🤔"
+this is where exactly things comes up for fronted developer Now take a look on views/postform so this form is not ready to accept this images & images are not like "text" yes express help to turn it into req.body but this form is defferent type it's need to pass -👇👇
+
+✈️✈️-""enctype="multipart/form-data""
+it's fronted thing that's not you'r backend part.
+
+NOW again one more time fill "postform" 
+Now you'got data in console log name,data:<Buffer> why is the coming in the form of Buffer because in order to reduce expand porttion we pass 👇👇
+""
+app.use(fileupload({useTempFiles: true,tempFileDir: "/tmp/");
+
+""
+@IMP:-> above one plays a very crusial role onece you use the above options or get hand dirty in case you want to move data you can you might notice you get mv:[function:fn] in console either it could be move on our directory or server or might uploade something cloudinary or Aws 
 
 
+ ----------------NEW-----------------------
 
+ ----------------HEADING-------------------
+ @--👉👉TITLE: 📝Upload images to cloudinary;
 
+ @ABOUT: []
+ @LOCATION:[app.js]
+ @Overview:
+ @Ref: ✈️🔗 https://cloudinary.com/documentation/image_upload_api_reference
+
+ @Ref: ✈️🔗https://console.cloudinary.com/console/c-ff223b74b9853962b24f65c186b51e/media-explorer
+
+@Step-By-Step@
+@require: const cloudinary = require("cloudinary").v2;
+@NOTE:Need to ".v2" A/c to documentation see 1st link signin part
+
+Then, pass object x={fname:lname}; Need to send as a response +
+Then, coming back to file part 
+-keep that request we've file & want to send to cloudinary HOW A'm gonna access file 
+let file = req.file.samplefile;
+@NOTE: As soon as you uploade on cloudinary it give you some "result" Back As per documentation.
+
+@👇NOTE: while uploading Images need to remove 
+useTempFiles: true,tempFileDir: "/tmp/" that we were pass in app.use(..)
+
+#NEED TO PASS DATA URL O.W ERRORs
  */
