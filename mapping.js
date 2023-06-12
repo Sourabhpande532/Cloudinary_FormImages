@@ -196,4 +196,32 @@ let file = req.file.samplefile;
 useTempFiles: true,tempFileDir: "/tmp/" that we were pass in app.use(..)
 
 #NEED TO PASS DATA URL O.W ERRORs
+
+
+ ----------------NEW-----------------------
+
+ ----------------HEADING-------------------
+ @--👉👉TITLE: 📝HANDLING MULTIPLES FILES & uploading THEM;
+
+ @ABOUT: MOREOVER LIKE uploading Images
+ @LOCATION:[📂views/postform.ejs, 📂app.js]
+ @Overview:
+ Let's discuss about How to upload MULTIPLES Images on Cloudnary here again tiny bit overview on fronted here.. where to go
+
+ -➕🔺Need to go postform & Need to explicitely mention "multiple" tag on samplefile input filled where you upload all the images O.w you won't be able to send multiple images.
+ -➕🔺Need to pass Array to send multiple Images heavily depends on how you accept the data.
+ -➕🔺Come back to app.js in /mypost routes inside one pass some variable 
+  e.g let result, let imageArray = [];
+ -➕🔺Varify it via IF Condition 
+  [@If we'v something into req.files then it works o.w not];
+ -➕🔺Need to run "for loop" 
+  @KeepNote: req.files.samplefile involve lot more file & Need to attach this samplefile because now it turn it into an Array
+ -➕🔺upload process on Cloudnary via uploader need to attach ".tempFilePath"
+ -➕🔺pass options as an folder inside one {folder:  "Users"} Cloudnary f name.
+ -➕🔺push into Array in the form of object {..Need to pass 2 property..} 
+  1st : public_id, 2nd: secure_url[@ROLE: this 2 can be put into DB itself & abruptly tell hey this are resources & customize that beside you can reuse coe anywhere insta,fb,amzon...]  
+ -➕🔺Go fronted one & upload images
+ -    
+ @Ref: ✈️🔗 http://localhost:5000/postform
+
  */
