@@ -175,7 +175,7 @@ app.use(fileupload({useTempFiles: true,tempFileDir: "/tmp/");
  ----------------HEADING-------------------
  @--👉👉TITLE: 📝Upload images to cloudinary;
 
- @ABOUT: []
+ @ABOUT: [MOREOVER on uploading]
  @LOCATION:[app.js]
  @Overview:
  @Ref: ✈️🔗 https://cloudinary.com/documentation/image_upload_api_reference
@@ -186,16 +186,27 @@ app.use(fileupload({useTempFiles: true,tempFileDir: "/tmp/");
 @require: const cloudinary = require("cloudinary").v2;
 @NOTE:Need to ".v2" A/c to documentation see 1st link signin part
 
-Then, pass object x={fname:lname}; Need to send as a response +
-Then, coming back to file part 
--keep that request we've file & want to send to cloudinary HOW A'm gonna access file 
+-🎗️We'r receiving all theis into req.files so instead seding into console send into details object. pass object x={fname:lname}; Need to send as a response.
+-🎗️Then, coming back to file part 
+-🎗️keep that request we've file & want to send to cloudinary HOW A'm gonna access file 
 let file = req.file.samplefile;
 @NOTE: As soon as you uploade on cloudinary it give you some "result" Back As per documentation.
 
-@👇NOTE: while uploading Images need to remove 
+then cloudinary.uploader.upload... it accept file & option({cloudinary folder name here}) need to pass (..here..)
+
+-🎗️Pass api key need to pass on cloudinary.config({})
+-🎗️pass cloud_name(string),api_key,api_secret 
+Ref: ✈️🔗https://cloudinary/dashboard
+
+Then go postform & filled it you got one error The "path" argument must sting so in order to resolve this route need to pass this info below one
+@👇NOTE: while uploading Images need to PASS inside middleware app.use..
 useTempFiles: true,tempFileDir: "/tmp/" that we were pass in app.use(..)
 
-#NEED TO PASS DATA URL O.W ERRORs
+-🎗️NEED TO PASS DATA URL O.W ERROR!
+-🎗️Need to pass ".tempFilePath" mandatory!.
+-🎗️Need to pass async await because entirty of big project hang arround with promises!
+-🎗️Use public_id as unique(on DB) it solve lot of Confusion when you upload you'r file with same name that time use "public_id";
+
 
 
  ----------------NEW-----------------------
